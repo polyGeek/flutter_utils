@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_utils/utils/eol.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,6 +31,9 @@ class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
   void _incrementCounter() {
+
+    EOL.printAllCombos();
+
     setState(() {
       _counter++;
     });
@@ -64,3 +68,4 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
