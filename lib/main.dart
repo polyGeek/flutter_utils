@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_utils/utils/eol.dart';
 
+
+/** ===============================================
+*  https://dart.dev/guides/language/extension-methods
+*  ===============================================*/
+
 void main() {
   runApp(const MyApp());
 }
