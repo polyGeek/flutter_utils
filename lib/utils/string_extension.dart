@@ -4,4 +4,10 @@ extension StringExtension on String {
   String capitalize() {
     return "${this[0].toUpperCase()}${this.substring(1).toLowerCase()}";
   }
+
+  /// Parse a string to an integer.
+  int parseInt() {
+    return int.parse(this);
+  }
+
 }
