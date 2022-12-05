@@ -252,10 +252,10 @@ class EOL {
 
 			/// Reset the previousNow so we can keep track of time between steps. Not time from app startup.
 			_previousNow = DateTime.now();
-		} catch (error) {
+		} catch (e) {
 			_print(
 					s: "\n<<<<<<<<<<\nLOG TRY/CATCH: " +
-							error.toString() +
+							e.toString() +
 							'\n     ' +
 							msg +
 							'\n>>>>>>>>>>\n',
@@ -329,7 +329,8 @@ class EOL {
 		required String borderSide,
 		dynamic json } ) {
 
-		if( msg != ''){
+		if( msg != '' ){
+			print( 'json: ' + json.toString() );
 			_print(
 					s: _spaces.substring( 0, ((_lineWidth - msg.length - 12) / 2).round())
 							+ '{ { { ' + msg.toUpperCase() + ' } } }',
