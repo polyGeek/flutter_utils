@@ -38,12 +38,18 @@ class EOL {
 
 	static String printLabelValue({ required String msg, required int longestLabel}) {
 		if ( msg.contains(':') == true ) {
-			String label = msg.split(':')[0];
-			String value = msg.split(':')[1];
-			for (int i = label.length; i < longestLabel; i++) {
-				label += ' ';
+
+			try {
+				String label = msg.split(':')[0];
+				String value = msg.split(':')[1];
+				for (int i = label.length; i < longestLabel; i++) {
+					label += ' ';
+				}
+				return label + ': ' + value;
+			} catch(e) {
+				return msg;
 			}
-			return label + ': ' + value;
+
 		} else {
 			return msg;
 		}
