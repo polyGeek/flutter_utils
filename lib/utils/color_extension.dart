@@ -2,7 +2,11 @@ import 'dart:ui';
 
 /// https://stackoverflow.com/questions/50081213/how-do-i-use-hexadecimal-color-strings-in-flutter
 
-
+///   Example
+///   final Color color = HexColor.fromHex('#aabbcc');
+///
+///   print(color.toHex());
+///   print(const Color(0xffaabbcc).toHex());
 extension HexColor on Color {
   /// String is in the format "aabbcc" or "ffaabbcc" with an optional leading "#".
   static Color fromHex(String hexString) {
