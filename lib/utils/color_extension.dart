@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-/// https://stackoverflow.com/questions/50081213/how-do-i-use-hexadecimal-color-strings-in-flutter
+// https://stackoverflow.com/questions/50081213/how-do-i-use-hexadecimal-color-strings-in-flutter
 
 ///   Example
 ///   final Color color = HexColor.fromHex('#aabbcc');
