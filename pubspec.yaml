@@ -1,5 +1,5 @@
 name: flutter_utils
-description: A new Flutter project.
+description: Dev utils for flutter
 
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+2

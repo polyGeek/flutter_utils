@@ -3,7 +3,7 @@
 import 'dart:convert';
 
 class EOL {
-	static const bool isDEBUG = false;
+	static bool isDEBUG = false;
 	static int _lineWidth = 85;
 	static DateTime _previousNow = DateTime.now();
 	static int _count = 1;
@@ -18,6 +18,10 @@ class EOL {
 	static const String _divider = '========================================================================================================================';
 	static String _makeDivider() {
 		return _divider.substring(0, _lineWidth);
+	}
+
+	static void setIsDebug( { required bool isDebug } ) {
+		isDEBUG = isDebug;
 	}
 
 	static void setLineWidth({int characterLineWidth = 70}) {
