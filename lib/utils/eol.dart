@@ -3,8 +3,8 @@
 import 'dart:convert';
 
 class EOL {
-	static bool isDEBUG = false;
-	static bool showColor = true;
+	static bool _isDEBUG = false;
+	static bool _showColor = true;
 	static int _lineWidth = 85;
 	static DateTime _previousNow = DateTime.now();
 	static int _count = 1;
@@ -22,11 +22,11 @@ class EOL {
 	}
 
 	static void setIsDebug( { required bool isDebug } ) {
-		isDEBUG = isDebug;
+		_isDEBUG = isDebug;
 	}
 
 	static void setShowColor( { required bool showColor } ) {
-		EOL.showColor = showColor;
+		EOL._showColor = showColor;
 	}
 
 	static void setLineWidth({int characterLineWidth = 70}) {
@@ -150,19 +150,19 @@ class EOL {
 		if ( _divider.length == 120 ) _makeDivider();
 
 		String s = '';
-		if(fail == true && showColor == true ) {
+		if(fail == true && _showColor == true ) {
 			color = Fail_combo_yellow_red;
 		} else {
 			color = '';
 		}
 
-		if ( shout == true && showColor == true ) {
+		if ( shout == true && _showColor == true ) {
 			color = Shout_combo_white_pink;
 		} else {
 			color = '';
 		}
 
-		if( showColor == false ) {
+		if( _showColor == false ) {
 			color = '';
 		}
 
@@ -346,7 +346,7 @@ class EOL {
 		required String borderSide,
 		dynamic json } ) {
 
-		if( isDEBUG == false )
+		if( _isDEBUG == false )
 			return;
 
 		if( msg != '' ){
