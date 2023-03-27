@@ -143,6 +143,9 @@ class EOL {
 				Map<String, dynamic>? map,
 			}) {
 
+		if( _isDEBUG == false )
+			return;
+
 		//return;
 		_logFile += msg + '\n\n';
 
@@ -150,16 +153,12 @@ class EOL {
 		if ( _divider.length == 120 ) _makeDivider();
 
 		String s = '';
-		if(fail == true && _showColor == true ) {
+		if( fail == true ) {
 			color = Fail_combo_yellow_red;
-		} else {
-			color = '';
 		}
 
-		if ( shout == true && _showColor == true ) {
+		if( shout == true ) {
 			color = Shout_combo_white_pink;
-		} else {
-			color = '';
 		}
 
 		if( _showColor == false ) {
